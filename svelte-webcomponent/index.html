@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My Counter</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <my-counter title="咣"></my-counter>
+    <script type="text/javascript" src="dist/index.js"></script>
+    <script type="text/javascript">
+      function handleClick(e) {
+        console.log(e.detail.text)
+      }
+
+      document
+      .querySelector("my-counter")
+      .addEventListener('customOnClick', handleClick)
+    </script>
+  </body>
+</html>
