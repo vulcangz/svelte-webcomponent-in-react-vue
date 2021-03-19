@@ -31,7 +31,6 @@ export default {
   methods: {
     handleClick: function (event) {
       console.log(event);
-      this.show = event.detail;
     },
     handleCustomClick: function (event) {
       this.count++;
