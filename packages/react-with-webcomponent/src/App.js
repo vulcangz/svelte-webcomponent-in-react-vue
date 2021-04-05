@@ -7,10 +7,20 @@ function App() {
   const buttonRef = useRef();
   // console.log(buttonRef)
   useEffect(() => {
-    buttonRef.current.addEventListener("customOnClick", (e) => {
+    let curRef = buttonRef.current
+    
+    function handleClick (e) {
       setCount(count + 1)
-      console.log(e.detail.text)
-    });
+      console.log(e.detail.text)      
+    }
+    
+    if (buttonRef && buttonRef.current) {
+      curRef.addEventListener("customOnClick", handleClick)
+    }
+    
+    return () => {
+      curRef.removeEventListener("customOnClick", handleClick)
+    }
   });
   return (
     <div>
@@ -21,7 +31,7 @@ function App() {
         <li>        
           <my-counter
             name="+"
-            title="咣"
+            title="当"
             ref={buttonRef}
             // the classic onClick also works
             onClick={(e) => {
