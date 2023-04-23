@@ -1,5 +1,4 @@
 <template>
-  <div id="app">
     <ul class="list-group">
       <li>
         Vue counter
@@ -13,7 +12,6 @@
         ></my-counter>
       </li>
     </ul>
-  </div>
 </template>
 
 <script>

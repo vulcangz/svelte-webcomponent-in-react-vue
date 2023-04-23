@@ -1,38 +1,19 @@
 {
-  "name": "svelte-webcomponent-in-react-vue",
+  "name": "root",
   "private": true,
-  "bolt": {
-    "workspaces": [
-      "packages/*"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "svelte": "bolt w MyCounter run build",
-    "react": "bolt w react-with-webcomponent run start",
-    "vue": "bolt w vue-with-webcomponent run serve"
+    "init": "npm install && npm run clean && lerna bootstrap",
+    "clean": "cross-env lerna clean --yes && lerna exec -- rimraf dist",
+    "refresh": "lerna bootstrap",
+    "build": "lerna run build --stream --scope=MyCounter",
+    "react": "lerna run start --stream --scope=react-with-webcomponent",
+    "vue2": "lerna run serve --stream --scope=vue-with-webcomponent",
+    "vue3": "lerna run dev --stream --scope=vue3-with-webcomponent"
   },
-  "dependencies": {
-    "@rollup/plugin-node-resolve": "^11.2.1",
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^13.1.1",
-    "@vue/cli-plugin-babel": "^4.5.12",
-    "@vue/cli-plugin-eslint": "^4.5.12",
-    "@vue/cli-service": "^4.5.12",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "8.1.0",
-    "core-js": "^3.10.0",
-    "eslint": "^7.23.0",
-    "eslint-plugin-vue": "^7.8.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "^4.0.3",
-    "rollup": "^2.44.0",
-    "rollup-plugin-svelte": "^7.1.0",
-    "svelte": "^3.37.0",
-    "vue": "^2.6.12",
-    "vue-template-compiler": "^2.6.12",
-    "web-vitals": "^1.1.1",
-    "webpack": "4.44.2"
+  "devDependencies": {
+    "lerna": "^6.6.1"
   }
 }

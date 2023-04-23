@@ -1,0 +1,20 @@
+0 silly argv {
+0 silly argv   _: [ 'bootstrap' ],
+0 silly argv   lernaVersion: '6.6.1',
+0 silly argv   '$0': 'node_modules\\lerna\\dist\\cli.js'
+0 silly argv }
+1 notice cli v6.6.1
+2 verbose rootPath G:\working\svelte-webcomponent-in-react-vue
+3 error JSONError: Unexpected string in JSON at position 692 while parsing '{  "name": "react-with-webcomponent",' in packages\react-with-webcomponent\package.json
+3 error
+3 error [0m [90m 24 |[39m     [32m"postcss-preset-env"[39m[33m:[39m [32m"^8.3.2"[39m[0m
+3 error [0m [90m 25 |[39m   }[0m
+3 error [0m[31m[1m>[22m[39m[90m 26 |[39m   [32m"eslintConfig"[39m[33m:[39m {[0m
+3 error [0m [90m    |[39m   [31m[1m^[22m[39m[0m
+3 error [0m [90m 27 |[39m     [32m"extends"[39m[33m:[39m [[0m
+3 error [0m [90m 28 |[39m       [32m"react-app"[39m[33m,[39m[0m
+3 error [0m [90m 29 |[39m       [32m"react-app/jest"[39m[0m
+3 error
+3 error     at parseJson (G:\working\svelte-webcomponent-in-react-vue\node_modules\parse-json\index.js:29:21)
+3 error     at parse (G:\working\svelte-webcomponent-in-react-vue\node_modules\load-json-file\index.js:15:9)
+3 error     at module.exports (G:\working\svelte-webcomponent-in-react-vue\node_modules\load-json-file\index.js:18:47)
